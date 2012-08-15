@@ -274,7 +274,7 @@ static NSMutableArray *cachedViews = nil;
             [html rangeOfString:@"</HTML>"].location == NSNotFound)
         {
             html = [NSString stringWithFormat:@"<!DOCTYPE html><html>\
-                    <head>%@</head><body>%@</body></html>", style, html];
+                    <head><meta name=\"viewport\" content=\"width=device-width\"/>%@</head><body>%@</body></html>", style, html];
         }
         else
         {
